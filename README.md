@@ -1,1 +1,1 @@
-# mql-plugin
+# MQL(Matrix Query Language) plugin for the IntelliJ IDEA
