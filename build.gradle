@@ -9,6 +9,12 @@ version '1.0-SNAPSHOT'
 intellij {
     version '2020.2.4'
 }
+
+publishPlugin {
+    channels 'alpha'
+    token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
+}
+
 patchPluginXml {
     changeNotes """
       Add change notes here.<br>
