@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'ru.jf17'
-version '1.0-SNAPSHOT'
+version '0.1-SNAPSHOT'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
@@ -17,8 +17,8 @@ publishPlugin {
 
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      Init project.<br>
+      <em>init</em>"""
 }
 
 repositories{
