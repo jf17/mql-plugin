@@ -8,6 +8,8 @@ apply plugin: 'org.jetbrains.intellij'
 
 sourceCompatibility = 1.11
 targetCompatibility = 1.11
+compileJava.options.encoding = 'UTF-8'
+
 
 group 'ru.jf17'
 version '0.2-SNAPSHOT'
