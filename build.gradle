@@ -10,7 +10,7 @@ sourceCompatibility = 1.11
 targetCompatibility = 1.11
 
 group 'ru.jf17'
-version '0.1-SNAPSHOT'
+version '0.2-SNAPSHOT'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
@@ -27,6 +27,7 @@ publishPlugin {
 patchPluginXml {
     changeNotes """
       Init project.<br>
+      Create class and icon.<br>
       <em>init</em>"""
 }
 
