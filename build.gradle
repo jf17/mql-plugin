@@ -34,3 +34,7 @@ patchPluginXml {
 repositories{
     mavenCentral()
 }
+
+runPluginVerifier {
+    ideVersions('IC-2021.1.1,IU-2021.1.1')
+}
