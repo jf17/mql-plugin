@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>ru.jf17.mql-plugin</id>
     <name>MQL</name>
-    <vendor url="https://github.com/jf17/mql-plugin">jf17-MQL-plugin</vendor>
+    <vendor url="https://github.com/jf17/mql-plugin">jf17</vendor>
 
     <description><![CDATA[
     Syntax highlighting for Enovia MQL(Matrix Query Language) Queries.<br>
