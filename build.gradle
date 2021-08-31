@@ -12,7 +12,7 @@ compileJava.options.encoding = 'UTF-8'
 
 
 group 'ru.jf17'
-version '0.2-SNAPSHOT'
+version '0.3-SNAPSHOT'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
@@ -30,6 +30,7 @@ patchPluginXml {
     changeNotes """
       Init project.<br>
       Create class and icon.<br>
+      Update icon.<br>
       <em>init</em>"""
 }
 

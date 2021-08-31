@@ -1,7 +1,20 @@
 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-
+ <defs>
+  <clipPath id="clip0">
+   <rect id="svg_1" fill="white" height="16" width="16"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
  <g>
   <title>Layer 1</title>
-  <text font-weight="bold" transform="matrix(1.4575 0 0 1.53398 -12.5428 -7.40432)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="4" id="svg_1" y="11.17031" x="9.24949" stroke-width="0" fill="#000000">MQL</text>
+  <g id="svg_2" clip-path="url(#clip0)">
+   <path id="svg_3" fill-opacity="0.7" fill="#F4AF3D" d="m1,16l15,0l0,-7l-15,0l0,7z" clip-rule="evenodd" fill-rule="evenodd"/>
+   <path id="svg_4" fill-opacity="0.8" fill="#9AA7B0" d="m7,1l-4,4l4,0l0,-4z" clip-rule="evenodd" fill-rule="evenodd"/>
+   <path id="svg_5" fill-opacity="0.8" fill="#9AA7B0" d="m8,1l0,5l-5,0l0,2l10,0l0,-7l-5,0z" clip-rule="evenodd" fill-rule="evenodd"/>
+   <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="6" id="svg_9" y="14.554623" x="1.991598" fill-opacity="0.7" stroke-opacity="null" stroke-width="0" stroke="null" fill="#000000">MQL</text>
+  </g>
  </g>
 </svg>
