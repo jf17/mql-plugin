@@ -1,10 +1,14 @@
+import org.jetbrains.grammarkit.tasks.*
+
 plugins {
     id 'java'
     id 'org.jetbrains.intellij' version '0.7.2'
+    id 'org.jetbrains.grammarkit' version '2021.1'
     id 'idea'
 }
 
 apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'org.jetbrains.grammarkit'
 
 sourceCompatibility = 1.11
 targetCompatibility = 1.11
@@ -12,7 +16,7 @@ compileJava.options.encoding = 'UTF-8'
 
 
 group 'ru.jf17'
-version '0.3-SNAPSHOT'
+version '0.4.0'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
@@ -22,22 +26,37 @@ intellij {
 }
 
 publishPlugin {
-    channels 'alpha'
     token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
 }
 
 patchPluginXml {
     changeNotes """
-      Init project.<br>
-      Create class and icon.<br>
-      Update icon.<br>
-      <em>init</em>"""
+<ul>
+<li>Init project</li>
+<li>Create class and icon</li>
+<li>Update icon</li>
+<li>added Syntax highlighting</li>
+</ul>
+<em>init</em>"""
 }
 
-repositories{
+task generateMQLLexer(type: GenerateLexer) {
+    source = 'src/main/java/ru/jf17/mql/lexer/MQLLexer.flex'
+    targetDir = 'src/gen/ru/jf17/mql/lexer/'
+    targetClass = 'MQLLexer'
+    purgeOldFiles = true
+}
+
+repositories {
     mavenCentral()
 }
 
 runPluginVerifier {
     ideVersions('IC-2021.1.1,IU-2021.1.1')
 }
+
+compileJava {
+    dependsOn generateMQLLexer
+}
+
+sourceSets.main.java.srcDirs 'src/gen'

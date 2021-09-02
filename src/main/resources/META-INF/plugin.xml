@@ -16,6 +16,9 @@
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="MQL File" implementationClass="ru.jf17.mql.MQLFileType"
                   fieldName="INSTANCE" language="MQL" extensions="mql"/>
+        <lang.syntaxHighlighterFactory language="MQL"
+                                       implementationClass="ru.jf17.mql.highlighter.MQLSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="ru.jf17.mql.highlighter.language.SimpleColorSettingsPage"/>
         <!-- Add your extensions here -->
     </extensions>
 
