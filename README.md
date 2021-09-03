@@ -1,3 +1,3 @@
 # MQL(Matrix Query Language) plugin for the IntelliJ IDEA
 
-alpha: https://plugins.jetbrains.com/plugins/alpha/list
+Get from Marketplace: https://plugins.jetbrains.com/plugin/16197-mql
