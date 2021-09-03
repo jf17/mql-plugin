@@ -31,7 +31,8 @@ public class SimpleColorSettingsPage implements ColorSettingsPage {
             new AttributesDescriptor("Bad value", MQLSyntaxHighlighter.BAD_CHARACTER),
             new AttributesDescriptor("Type name", MQLSyntaxHighlighter.CONID),
             new AttributesDescriptor("Bus id", MQLSyntaxHighlighter.BUS_ID),
-            new AttributesDescriptor("Actions", MQLSyntaxHighlighter.ACTION)
+            new AttributesDescriptor("Actions", MQLSyntaxHighlighter.ACTION),
+            new AttributesDescriptor("System type", MQLSyntaxHighlighter.SYSTEM_TYPE)
     };
 
     @Nullable
@@ -52,12 +53,15 @@ public class SimpleColorSettingsPage implements ColorSettingsPage {
         return "# Examples \n" +
                 "print bus 123123.123123.123123.123123 select type name revision dump |; \n" +
                 "add connection 'Approval' to 10496.23564.8546.234 fromrel 654.3652.3258.98; \n" +
-                "temp query bus 'Products' * *  where id==10496.23564.8546.234 select name history.promote; \n" +
-                "print bus 123123.123123.123123.123123 select from[Developmetn].to[Team].id; \n" +
-                "print bus 123123.123123.123123.123123 select from[Developmetn].to[Team].type; \n" +
-                "print bus 123123.123123.123123.123123 select from[Developmetn].to[Team].attribute[Value]; \n" +
+                "temp query bus 'Products' * *  where id==10496.23564.8546.234 && current=='Active' select name history.promote; \n" +
+                "print bus 123123.123123.123123.123123 select from[Development].to[Team].id; \n" +
+                "print bus 123123.123123.123123.123123 select from[Development].to[Team].type; \n" +
+                "print bus 123123.123123.123123.123123 select from[Development].to[Team].attribute[Value]; \n" +
                 "trigger on; \n" +
                 "trigger off; \n" +
+                "insert program XLSearch_mxJPO.java; \n" +
+                "compile program XLSearch force update; \n" +
+                "del command APRNewCommand; \n" +
                 "   ";
     }
 

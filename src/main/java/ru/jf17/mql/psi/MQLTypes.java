@@ -1,8 +1,6 @@
 package ru.jf17.mql.psi;
 
-import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.TokenSet;
 
 public interface MQLTypes {
     IElementType STRING = new MQLElementType("STRING");
@@ -83,4 +81,26 @@ public interface MQLTypes {
     IElementType PROMOTE = new MQLElementType("PROMOTE");
     IElementType HISTORY = new MQLElementType("HISTORY");
     IElementType QUERY = new MQLElementType("QUERY");
+    IElementType NOT_EQUAL = new MQLElementType("NOT_EQUAL");
+    IElementType MODIFY = new MQLElementType("MODIFY");
+    IElementType EXEC = new MQLElementType("EXEC");
+    IElementType PROGRAM = new MQLElementType("PROGRAM");
+    IElementType FORCE = new MQLElementType("FORCE");
+    IElementType TABLE = new MQLElementType("TABLE");
+    IElementType EXPAND = new MQLElementType("EXPAND");
+    IElementType ESCAPE = new MQLElementType("ESCAPE");
+    IElementType FORMAT = new MQLElementType("FORMAT");
+    IElementType TOTYPE = new MQLElementType("TOTYPE");
+    IElementType UPDATE = new MQLElementType("UPDATE");
+    IElementType SYSTEM = new MQLElementType("SYSTEM");
+    IElementType HIDDEN = new MQLElementType("HIDDEN");
+    IElementType NOT_HIDDEN = new MQLElementType("NOT_HIDDEN");
+    IElementType COMPILE = new MQLElementType("COMPILE");
+    IElementType COMMAND = new MQLElementType("COMMAND");
+    IElementType CURRENT = new MQLElementType("CURRENT");
+    IElementType RECURSE = new MQLElementType("RECURSE");
+    IElementType FROMTYPE = new MQLElementType("FROMTYPE");
+    IElementType AND = new MQLElementType("AND");
+    IElementType OR = new MQLElementType("OR");
+    IElementType INSERT = new MQLElementType("INSERT");
 }

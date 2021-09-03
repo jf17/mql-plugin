@@ -92,8 +92,13 @@ doubleColon          = :: | \u2237
 rightArrow           = -> | \u2192
 leftArrow            = <- | \u2190
 doubleRightArrow     = => | \u21D2
+ampersand            = \&
+and                  = {ampersand}{ampersand}
 verticalBar          = \|
-equal                = ==
+or                   = {verticalBar}{verticalBar}
+equal                = =
+doubleEqual          = {equal}{equal}
+notEqual             = {exlamationMark}{equal}
 dash                 = -
 hash                 = #
 exlamationMark       = \!
@@ -140,6 +145,14 @@ busId                = {digits}{dot}{digits}{dot}{digits}{dot}{digits}
         "temp"                       { return MQLTypes.TEMP; }
         "query"                      { return MQLTypes.QUERY; }
         "dump"                       { return MQLTypes.DUMP; }
+        "escape"                     { return MQLTypes.ESCAPE; }
+        "expand"                     { return MQLTypes.EXPAND; }
+        "recurse"                    { return MQLTypes.RECURSE; }
+        "compile"                    { return MQLTypes.COMPILE; }
+        "exec"                       { return MQLTypes.EXEC; }
+        "modify"                     { return MQLTypes.MODIFY; }
+        "mod"                        { return MQLTypes.MODIFY; }
+        "del"                        { return MQLTypes.DELETE; }
 
     /* selectors */
         "select"                     { return MQLTypes.SELECT; }
@@ -155,12 +168,17 @@ busId                = {digits}{dot}{digits}{dot}{digits}{dot}{digits}
         "description"                 { return MQLTypes.DESCRIPTION; }
         "attribute"                   { return MQLTypes.ATTRIBUTE; }
         "file"                        { return MQLTypes.FILE; }
-        "history"                     { return MQLTypes.HISTORY; }
+        "current"                     { return MQLTypes.CURRENT; }
 
     /* type */
         "bus"                            { return MQLTypes.BUS; }
         "connection"                     { return MQLTypes.CONNECTION; }
         "relationship"                   { return MQLTypes.RELATIONSHIP; }
+        "program"                        { return MQLTypes.PROGRAM; }
+        "prog"                           { return MQLTypes.PROGRAM; }
+        "command"                        { return MQLTypes.COMMAND; }
+        "table"                          { return MQLTypes.TABLE; }
+        "insert"                         { return MQLTypes.INSERT; }
 
     /* direction  */
         "to"                             { return MQLTypes.TO; }
@@ -170,12 +188,23 @@ busId                = {digits}{dot}{digits}{dot}{digits}{dot}{digits}
         "torel"                          { return MQLTypes.TOREL; }
         "frommid"                        { return MQLTypes.FROMMID; }
         "tomid"                          { return MQLTypes.TOMID; }
+        "fromtype"                       { return MQLTypes.FROMTYPE; }
+        "totype"                         { return MQLTypes.TOTYPE; }
 
     /* actions  */
         "on"                            { return MQLTypes.ON; }
         "off"                           { return MQLTypes.OFF; }
         "promote"                       { return MQLTypes.PROMOTE; }
         "demote"                        { return MQLTypes.DEMOTE; }
+
+    /* system types  */
+        "history"                     { return MQLTypes.HISTORY; }
+        "format"                      { return MQLTypes.FORMAT; }
+        "force"                       { return MQLTypes.FORCE; }
+        "update"                      { return MQLTypes.UPDATE; }
+        "system"                      { return MQLTypes.SYSTEM; }
+        "hidden"                      { return MQLTypes.HIDDEN; }
+        "!hidden"                     { return MQLTypes.NOT_HIDDEN; }
 
         {lineDoc}                    { return MQLTypes.LINE_DOC; }
         {lineComment}                { return MQLTypes.LINE_COMMENT; }
@@ -208,7 +237,8 @@ busId                = {digits}{dot}{digits}{dot}{digits}{dot}{digits}
         {leftArrow}                  { return MQLTypes.LEFT_ARROW; }
         {doubleRightArrow}           { return MQLTypes.DOUBLE_RIGHT_ARROW; }
         {verticalBar}                { return MQLTypes.VERTICAL_BAR; }
-        {equal}                      { return MQLTypes.EQUAL; }
+        {doubleEqual}                { return MQLTypes.EQUAL; }
+        {notEqual}                   { return MQLTypes.NOT_EQUAL; }
         {exlamationMark}             { return MQLTypes.EXLAMATION_MARK; }
         {questionMark}               { return MQLTypes.QUESTION_MARK; }
         {comma}                      { return MQLTypes.COMMA; }
@@ -226,6 +256,8 @@ busId                = {digits}{dot}{digits}{dot}{digits}{dot}{digits}
         {superOrSubscript}           { return MQLTypes.SUPER_OR_SUBSCRIPT; }
         {leq}                        { return MQLTypes.LEQ; }
         {geq}                        { return MQLTypes.GEQ; }
+        {and}                        { return MQLTypes.AND; }
+        {or}                         { return MQLTypes.OR; }
 
     /* operators */
         {dot} / {rightParen}         { return MQLTypes.SYMOP_NO_RESERVED; }

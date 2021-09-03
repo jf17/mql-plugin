@@ -17,6 +17,8 @@ import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAtt
 public class MQLSyntaxHighlighter extends SyntaxHighlighterBase {
     public static final TextAttributesKey BUS_ID =
             createTextAttributesKey("MQL_BUSID", DefaultLanguageHighlighterColors.METADATA);
+    public static final TextAttributesKey SYSTEM_TYPE =
+            createTextAttributesKey("MQL_SYSTEM_TYPE", DefaultLanguageHighlighterColors.HIGHLIGHTED_REFERENCE);
     public static final TextAttributesKey BASIC_ATTRIBUTE =
             createTextAttributesKey("MQL_BASIC_ATTRIBUTE", DefaultLanguageHighlighterColors.INSTANCE_METHOD);
     public static final TextAttributesKey SELECTOR =
@@ -54,6 +56,7 @@ public class MQLSyntaxHighlighter extends SyntaxHighlighterBase {
 
 
     private static final TextAttributesKey[] BUS_IDS = new TextAttributesKey[]{BUS_ID};
+    private static final TextAttributesKey[] SYSTEM_TYPES = new TextAttributesKey[]{SYSTEM_TYPE};
     private static final TextAttributesKey[] ACTIONS = new TextAttributesKey[]{ACTION};
     private static final TextAttributesKey[] SELECTORS = new TextAttributesKey[]{SELECTOR};
     private static final TextAttributesKey[] DIRECTIONS = new TextAttributesKey[]{DIRECTION};
@@ -98,6 +101,8 @@ public class MQLSyntaxHighlighter extends SyntaxHighlighterBase {
             return DIRECTIONS;
         } else if (MQLParserDefinition.BASIC_ATTRIBUTES.contains(tokenType)) {
             return BASIC_ATTRIBUTES;
+        } else if (MQLParserDefinition.SYSTEM_TYPES.contains(tokenType)) {
+            return SYSTEM_TYPES;
         } else if (tokenType.equals(MQLTypes.CHAR)) {
             return CHAR_KEYS;
         } else if (MQLParserDefinition.STRING_KEYS.contains(tokenType)) {
