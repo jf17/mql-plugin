@@ -179,6 +179,7 @@ busId                = {digits}{dot}{digits}{dot}{digits}{dot}{digits}
         "command"                        { return MQLTypes.COMMAND; }
         "table"                          { return MQLTypes.TABLE; }
         "insert"                         { return MQLTypes.INSERT; }
+        "policy"                         { return MQLTypes.POLICY; }
 
     /* direction  */
         "to"                             { return MQLTypes.TO; }

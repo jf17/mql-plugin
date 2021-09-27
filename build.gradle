@@ -16,11 +16,11 @@ compileJava.options.encoding = 'UTF-8'
 
 
 group 'ru.jf17'
-version '0.4.1'
+version '0.4.2'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2021.1.1'
+    version '2021.2.2'
     plugins = ['java', 'gradle', 'gradle-java']
     downloadSources true
 }
@@ -37,6 +37,7 @@ patchPluginXml {
 <li>Update icon</li>
 <li>added Syntax highlighting</li>
 <li>added keywords</li>
+<li>added keyword and update support IDEA version</li>
 </ul>
 <em>init</em>"""
 }

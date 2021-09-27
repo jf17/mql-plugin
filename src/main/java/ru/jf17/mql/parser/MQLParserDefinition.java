@@ -23,7 +23,7 @@ public class MQLParserDefinition {
     public static final TokenSet SELECTORS = TokenSet.create(MQLTypes.SELECT, MQLTypes.WHERE, MQLTypes.LIMIT);
 
     public static final TokenSet BASIC_ATTRIBUTES = TokenSet.create(MQLTypes.ID, MQLTypes.NAME, MQLTypes.TYPE,
-            MQLTypes.ORIGINATED, MQLTypes.DESCRIPTION, MQLTypes.ATTRIBUTE, MQLTypes.REVISION, MQLTypes.FILE, MQLTypes.CURRENT);
+            MQLTypes.ORIGINATED, MQLTypes.DESCRIPTION, MQLTypes.ATTRIBUTE, MQLTypes.REVISION, MQLTypes.FILE, MQLTypes.CURRENT, MQLTypes.POLICY);
 
     public static final TokenSet TYPES = TokenSet.create(MQLTypes.BUS, MQLTypes.CONNECTION, MQLTypes.RELATIONSHIP,
             MQLTypes.PROGRAM, MQLTypes.COMMAND, MQLTypes.TABLE);

@@ -103,4 +103,5 @@ public interface MQLTypes {
     IElementType AND = new MQLElementType("AND");
     IElementType OR = new MQLElementType("OR");
     IElementType INSERT = new MQLElementType("INSERT");
+    IElementType POLICY = new MQLElementType("POLICY");
 }
