@@ -2,7 +2,7 @@ import org.jetbrains.grammarkit.tasks.*
 
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.7.2'
+    id 'org.jetbrains.intellij' version '1.8.0'
     id 'org.jetbrains.grammarkit' version '2021.1'
     id 'idea'
 }
@@ -20,7 +20,7 @@ version '0.4.3'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2021.3.1'
+    version '2022.2.1'
     plugins = ['java', 'gradle', 'gradle-java']
     downloadSources true
 }
@@ -39,6 +39,7 @@ patchPluginXml {
 <li>added keywords</li>
 <li>added keyword and update support IDEA version</li>
 <li>update support IDEA version</li>
+<li>update support IDEA version 2022.2.1</li>
 </ul>
 <em>init</em>"""
 }
@@ -55,7 +56,7 @@ repositories {
 }
 
 runPluginVerifier {
-    ideVersions('IC-2021.3.1,IU-2021.3.1')
+    ideVersions('IC-2022.2.1,IU-2022.2.1')
 }
 
 compileJava {
