@@ -26,8 +26,8 @@ on:
 #     - name: Run build with Gradle Wrapper
 #       run: ./gradlew build
 
-# permissions:
-#   contents: write
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
         distribution: 'temurin'
     - name: Change wrapper permissions
       run: chmod +x ./gradlew
-    - name: Run the Gradle buildPlugin task
-      uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
-      with:
-        arguments: -b ci.gradle buildPlugin
+    - name: generateLexer
+      run: ./gradlew generateLexer
+    - name: Run build with Gradle Wrapper
+      run: ./gradlew build
