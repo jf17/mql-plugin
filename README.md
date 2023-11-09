@@ -10,4 +10,8 @@ Get from Marketplace: https://plugins.jetbrains.com/plugin/16197-mql
 nano .bashrc
 
 export ORG_GRADLE_PROJECT_intellijPublishToken="XXX"
+
+grammarkit -> generateLexer
+intelij- > buildPlugin
+intelij- > publishPlugin
 ```
